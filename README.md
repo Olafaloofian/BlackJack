@@ -51,6 +51,6 @@ track moves made
 
 Functional pieces
 User click -> on desk -> display the next card in the Deck
-user selects card drag to the correct 
+user selects card drag to the correct
 
 Styling ideas
