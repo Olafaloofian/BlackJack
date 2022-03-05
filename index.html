@@ -1,22 +1,134 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./assets/css/game.css">
+        <link rel="stylesheet" href="./assets/css/jquery-ui.min.css">
+        <script src="./assets/js/external/jquery/jquery.js"></script>
+        <script src="./assets/js/jquery-ui.min.js"></script>
     </head>
     <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <canvas id="gameCanvas" width="100%" height="100%"></canvas>
+        <!-- <canvas id="gameCanvas" style="width:1400px;height:900px;border:10px solid #000;"></canvas> -->
+        <div id="rowBank">
+        <div id="row1">
+            <div id="ph01s1"></div>
+            <div id="ph01s2"></div>
+            <div id="ph01s3"></div>
+            <div id="ph01s4"></div>
+            <div id="ph01s5"></div>
+            <div id="ph01s6"></div>
+            <div id="ph01s7"></div>
+            <div id="ph01s8"></div>
+            <div id="ph01s9"></div>
+            <div id="ph01s10"></div>
+            <div id="ph01s11"></div>
+            <div id="ph01s12"></div>
+            <div id="ph01s13"></div>
+        </div>
+        <div id="row2">
+            <div id="ph02s1"></div>
+            <div id="ph02s2"></div>
+            <div id="ph02s3"></div>
+            <div id="ph02s4"></div>
+            <div id="ph02s5"></div>
+            <div id="ph02s6"></div>
+            <div id="ph02s7"></div>
+            <div id="ph02s8"></div>
+            <div id="ph02s9"></div>
+            <div id="ph02s10"></div>
+            <div id="ph02s11"></div>
+            <div id="ph02s12"></div>
+            <div id="ph02s13"></div>
+        </div>
+        <div id="row3">
+            <div id="ph03s1"></div>
+            <div id="ph03s2"></div>
+            <div id="ph03s3"></div>
+            <div id="ph03s4"></div>
+            <div id="ph03s5"></div>
+            <div id="ph03s6"></div>
+            <div id="ph03s7"></div>
+            <div id="ph03s8"></div>
+            <div id="ph03s9"></div>
+            <div id="ph03s10"></div>
+            <div id="ph03s11"></div>
+            <div id="ph03s12"></div>
+            <div id="ph03s13"></div>
+        </div>
+        <div id="row4">
+            <div id="ph04s1"></div>
+            <div id="ph04s2"></div>
+            <div id="ph04s3"></div>
+            <div id="ph04s4"></div>
+            <div id="ph04s5"></div>
+            <div id="ph04s6"></div>
+            <div id="ph04s7"></div>
+            <div id="ph04s8"></div>
+            <div id="ph04s9"></div>
+            <div id="ph04s10"></div>
+            <div id="ph04s11"></div>
+            <div id="ph04s12"></div>
+            <div id="ph04s13"></div>
+        </div>
+        <div id="row5">
+            <div id="ph05s1"></div>
+            <div id="ph05s2"></div>
+            <div id="ph05s3"></div>
+            <div id="ph05s4"></div>
+            <div id="ph05s5"></div>
+            <div id="ph05s6"></div>
+            <div id="ph05s7"></div>
+            <div id="ph05s8"></div>
+            <div id="ph05s9"></div>
+            <div id="ph05s10"></div>
+            <div id="ph05s11"></div>
+            <div id="ph05s12"></div>
+            <div id="ph05s13"></div>
+        </div>
+        <div id="row6">
+            <div id="ph06s1"></div>
+            <div id="ph06s2"></div>
+            <div id="ph06s3"></div>
+            <div id="ph06s4"></div>
+            <div id="ph06s5"></div>
+            <div id="ph06s6"></div>
+            <div id="ph06s7"></div>
+            <div id="ph06s8"></div>
+            <div id="ph06s9"></div>
+            <div id="ph06s10"></div>
+            <div id="ph06s11"></div>
+            <div id="ph06s12"></div>
+            <div id="ph06s13"></div>
+        </div>
+        <div id="row7">
+            <div id="ph07s1"></div>
+            <div id="ph07s2"></div>
+            <div id="ph07s3"></div>
+            <div id="ph07s4"></div>
+            <div id="ph07s5"></div>
+            <div id="ph07s6"></div>
+            <div id="ph07s7"></div>
+            <div id="ph07s8"></div>
+            <div id="ph07s9"></div>
+            <div id="ph07s10"></div>
+            <div id="ph07s11"></div>
+            <div id="ph07s12"></div>
+            <div id="ph07s13"></div>
+        </div>
+        </div>
+        <div id="stack">
+            <div id="stack1"></div>
+            <div id="stack2"></div>
+            <div id="stack3"></div>
+            <div id="stack4"></div>
+        </div>
+        <div id="cardHand">
+            <div id="rowA"></div>
+            <div id="rowB"></div>
+        </div>
         <script src="./assets/js/app.js" async defer></script>
     </body>
 </html>
