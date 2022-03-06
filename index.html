@@ -11,124 +11,36 @@
         <script src="./assets/js/jquery-ui.min.js"></script>
     </head>
     <body>
-        <!-- <canvas id="gameCanvas" style="width:1400px;height:900px;border:10px solid #000;"></canvas> -->
-        <div id="rowBank">
-        <div id="row1">
-            <div id="ph01s1"></div>
-            <div id="ph01s2"></div>
-            <div id="ph01s3"></div>
-            <div id="ph01s4"></div>
-            <div id="ph01s5"></div>
-            <div id="ph01s6"></div>
-            <div id="ph01s7"></div>
-            <div id="ph01s8"></div>
-            <div id="ph01s9"></div>
-            <div id="ph01s10"></div>
-            <div id="ph01s11"></div>
-            <div id="ph01s12"></div>
-            <div id="ph01s13"></div>
+        <div style="display: flex;">
+            <div style="width: 70%;height:220px;display: flex;justify-content: center;margin:.25rem;">
+                <div id="club" style="margin:.25rem;" onclick="selectspot('club');"><img src="./assets/images/clubs.png"></div>
+                <div id="diamond" style="margin:.25rem;" onclick="selectspot('diamond');"><img src="./assets/images/diamonds.png"></div>
+                <div id="heart" style="margin:.25rem;" onclick="selectspot('heart');"><img src="./assets/images/hearts.png"></div>
+                <div id="spade" style="margin:.25rem;" onclick="selectspot('spade');"><img src="./assets/images/spades.png"></div>
+            </div>
+            <div style="width: 350px;height:220px;display: flex;">
+                <div id="updeck" style="margin:.25rem;"><img src="./assets/images/blank.png" alt="Card Deck"></div>
+                <div id="downdeck" style="margin:.25rem;"><img id="backStackImg" src="./assets/images/cards/BlueCardBack.png" alt="Card Deck"></div>
+            </div>
         </div>
-        <div id="row2">
-            <div id="ph02s1"></div>
-            <div id="ph02s2"></div>
-            <div id="ph02s3"></div>
-            <div id="ph02s4"></div>
-            <div id="ph02s5"></div>
-            <div id="ph02s6"></div>
-            <div id="ph02s7"></div>
-            <div id="ph02s8"></div>
-            <div id="ph02s9"></div>
-            <div id="ph02s10"></div>
-            <div id="ph02s11"></div>
-            <div id="ph02s12"></div>
-            <div id="ph02s13"></div>
+        <div style="display: flex;">
+            <div style="display: flex;margin: auto;align-self: center;">
+                <div id="stack1" style="border: 1px solid;width:150px;height:200px;margin:.25rem;"></div>
+                <div id="stack2" style="border: 1px solid;width:150px;height:200px;margin:.25rem;"></div>
+                <div id="stack3" style="border: 1px solid;width:150px;height:200px;margin:.25rem;"></div>
+                <div id="stack4" style="border: 1px solid;width:150px;height:200px;margin:.25rem;"></div>
+                <div id="stack5" style="border: 1px solid;width:150px;height:200px;margin:.25rem;"></div>
+                <div id="stack6" style="border: 1px solid;width:150px;height:200px;margin:.25rem;"></div>
+                <div id="stack7" style="border: 1px solid;width:150px;height:200px;margin:.25rem;"></div>
+            </div>
         </div>
-        <div id="row3">
-            <div id="ph03s1"></div>
-            <div id="ph03s2"></div>
-            <div id="ph03s3"></div>
-            <div id="ph03s4"></div>
-            <div id="ph03s5"></div>
-            <div id="ph03s6"></div>
-            <div id="ph03s7"></div>
-            <div id="ph03s8"></div>
-            <div id="ph03s9"></div>
-            <div id="ph03s10"></div>
-            <div id="ph03s11"></div>
-            <div id="ph03s12"></div>
-            <div id="ph03s13"></div>
-        </div>
-        <div id="row4">
-            <div id="ph04s1"></div>
-            <div id="ph04s2"></div>
-            <div id="ph04s3"></div>
-            <div id="ph04s4"></div>
-            <div id="ph04s5"></div>
-            <div id="ph04s6"></div>
-            <div id="ph04s7"></div>
-            <div id="ph04s8"></div>
-            <div id="ph04s9"></div>
-            <div id="ph04s10"></div>
-            <div id="ph04s11"></div>
-            <div id="ph04s12"></div>
-            <div id="ph04s13"></div>
-        </div>
-        <div id="row5">
-            <div id="ph05s1"></div>
-            <div id="ph05s2"></div>
-            <div id="ph05s3"></div>
-            <div id="ph05s4"></div>
-            <div id="ph05s5"></div>
-            <div id="ph05s6"></div>
-            <div id="ph05s7"></div>
-            <div id="ph05s8"></div>
-            <div id="ph05s9"></div>
-            <div id="ph05s10"></div>
-            <div id="ph05s11"></div>
-            <div id="ph05s12"></div>
-            <div id="ph05s13"></div>
-        </div>
-        <div id="row6">
-            <div id="ph06s1"></div>
-            <div id="ph06s2"></div>
-            <div id="ph06s3"></div>
-            <div id="ph06s4"></div>
-            <div id="ph06s5"></div>
-            <div id="ph06s6"></div>
-            <div id="ph06s7"></div>
-            <div id="ph06s8"></div>
-            <div id="ph06s9"></div>
-            <div id="ph06s10"></div>
-            <div id="ph06s11"></div>
-            <div id="ph06s12"></div>
-            <div id="ph06s13"></div>
-        </div>
-        <div id="row7">
-            <div id="ph07s1"></div>
-            <div id="ph07s2"></div>
-            <div id="ph07s3"></div>
-            <div id="ph07s4"></div>
-            <div id="ph07s5"></div>
-            <div id="ph07s6"></div>
-            <div id="ph07s7"></div>
-            <div id="ph07s8"></div>
-            <div id="ph07s9"></div>
-            <div id="ph07s10"></div>
-            <div id="ph07s11"></div>
-            <div id="ph07s12"></div>
-            <div id="ph07s13"></div>
-        </div>
-        </div>
-        <div id="stack">
-            <div id="stack1"></div>
-            <div id="stack2"></div>
-            <div id="stack3"></div>
-            <div id="stack4"></div>
-        </div>
-        <div id="cardHand">
-            <div id="rowA"></div>
-            <div id="rowB"></div>
-        </div>
+
+
+
+
+        <footer style="position: sticky ">
+            <input type="button" id="Start" value="Start Game">
+        </footer>
         <script src="./assets/js/app.js" async defer></script>
     </body>
 </html>
