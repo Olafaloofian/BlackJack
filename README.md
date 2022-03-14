@@ -1,4 +1,4 @@
-# Solitaire-Game
+# BlackJack
 
 General Requirements
 •	This is a solo project!
@@ -26,31 +26,5 @@ Deliverables
 •	A link to your game, which is deployed somewhere on the internet
 •	A link to your Github repository, so we can see the progress on your game
 
-Solitaire game
-Property Game background = card table
-Deck of Cards = 52
-Diamonds = [2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K, A]
-Hearts   = [2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K, A]
-Clubs   = [2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K, A]
-SPADE  = [2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K, A]
-Loadgame function randomly layout cards.
-Layout  - the bank = 4 empty space for Aces 
-the idea of the game is to get the cards into the correct sequence in the bank slot.  The correct sequence is [A, 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K]
-Will track the time and number of moves
-7 card spots
-Initial cards number of cards per spot = [1, 2, 3, 4, 5 ,6 , 7] 
-card will be laid at random
- Hints – when player gets stuck
+Changed Direction, Originally I wanted to build a game of solitaire whcih turned out to be a lot harder then I expected.  So I switched gears and started blackjack.  Somethin wth fewer cards. I still want to build the solitare game but I will do that at a later date.
 
-Project Requirements
-Load Layout
-sequence cards
-keep score 
-track time 
-track moves made
-
-Functional pieces
-User click -> on desk -> display the next card in the Deck
-user selects card drag to the correct
-
-Styling ideas
