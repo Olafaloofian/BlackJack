@@ -6,41 +6,76 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./assets/css/game.css">
-        <link rel="stylesheet" href="./assets/css/jquery-ui.min.css">
-        <script src="./assets/js/external/jquery/jquery.js"></script>
-        <script src="./assets/js/jquery-ui.min.js"></script>
-    </head>
+        </head>
     <body>
-        <div style="display: flex;">
-            <div style="width: 70%;height:220px;display: flex;justify-content: center;margin:.25rem;">
-                <div id="club" style="margin:.25rem;" onclick="selectspot('club');"><img src="./assets/images/clubs.png"></div>
-                <div id="diamond" style="margin:.25rem;" onclick="selectspot('diamond');"><img src="./assets/images/diamonds.png"></div>
-                <div id="heart" style="margin:.25rem;" onclick="selectspot('heart');"><img src="./assets/images/hearts.png"></div>
-                <div id="spade" style="margin:.25rem;" onclick="selectspot('spade');"><img src="./assets/images/spades.png"></div>
+        <div class="game-console">
+            <div id="dealer" class='hand'>
+                <div class="dealer-card-container">
+                    <div class="cards-container">                        
+                        <div id="dealer5"></div>
+                        <div id="dealer4"></div>                
+                        <div id="dealer3"></div>   
+                        <div class="card" id="dealer2"></div>    
+                        <div class="card" id="dealer1"></div>
+                        </div>
+                    <div class="dealerLable">Dealer Cards</div>
+                </div>
             </div>
-            <div style="width: 350px;height:220px;display: flex;">
-                <div id="updeck" style="margin:.25rem;"><img src="./assets/images/blank.png" alt="Card Deck"></div>
-                <div id="downdeck" style="margin:.25rem;"><img id="backStackImg" src="./assets/images/cards/BlueCardBack.png" alt="Card Deck"></div>
+            <div class="button-container" style="width:600px;">
+                <div style="display: flex;justify-content:center;margin:1rem;">
+                    <div style="width:350px;">
+                        <button type="button" id="bet5" class="gamebetbtn">$5</button>
+                        <button type="button" id="bet10" class="gamebetbtn">$10</button>
+                        <button type="button" id="bet15" class="gamebetbtn">$15</button>
+                        <button type="button" id="bet20" class="gamebetbtn">$20</button>
+                        <button type="button" id="bet25" class="gamebetbtn">$25</button><br>
+                    </div>
+                    <div>
+                        <button type="button" id="hit"class="btn">Hit</button>
+                        <button type="button" id="deal" class="btn">Deal</button>
+                    </div>
+                </div>
+            </div>
+            <div id="player" class='hand'>
+                <div class="dealer-card-container">
+                    <div class="dealerLable">Players Cards</div>
+                    <div class="cards-container"> 
+                        <div id="player5"></div>                
+                        <div id="player4"></div>   
+                        <div id="player3"></div>                
+                        <div id="player2" class="card"></div>
+                        <div id="player1" class="card"></div>
+                        <div>
+                            <br>
+                            <div id="BankTotal" class="usr-container">
+                                Bank: $<div id="bankamount"></div>
+                                &nbsp;Won: $<div id="winnings"></div>
+                                &nbsp;Lose: $<div id="loses"></div><br />
+                                <button type="button" id="btnbank" class="btn">Bank</button>
+                        </div>
+                        </div>
+                    </div>               
+                </div>
             </div>
         </div>
-        <div style="display: flex;">
-            <div style="display: flex;margin: auto;align-self: center;">
-                <div id="stack1" style="border: 1px solid;width:150px;height:200px;margin:.25rem;"></div>
-                <div id="stack2" style="border: 1px solid;width:150px;height:200px;margin:.25rem;"></div>
-                <div id="stack3" style="border: 1px solid;width:150px;height:200px;margin:.25rem;"></div>
-                <div id="stack4" style="border: 1px solid;width:150px;height:200px;margin:.25rem;"></div>
-                <div id="stack5" style="border: 1px solid;width:150px;height:200px;margin:.25rem;"></div>
-                <div id="stack6" style="border: 1px solid;width:150px;height:200px;margin:.25rem;"></div>
-                <div id="stack7" style="border: 1px solid;width:150px;height:200px;margin:.25rem;"></div>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Modal Header</h2>
+                </div>
+                <div class="modal-body">
+            <img src="./assets/images/pokerchips.png">
+                </div>
+                <div class="modal-footer">
+                <h3>Modal Footer</h3>
+                </div>
             </div>
         </div>
-
-
-
-
-        <footer style="position: sticky ">
-            <input type="button" id="Start" value="Start Game">
-        </footer>
-        <script src="./assets/js/app.js" async defer></script>
+        <script src="./assets/js/blackjack.js" async defer></script>
+        <script src="./assets/js/modal.js" async defer></script>
     </body>
 </html>

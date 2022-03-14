@@ -1,50 +1,43 @@
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;   
+}
+body{
+    margin: 0;
+    font-family: var(--bs-body-font-family);
+    font-size: var(--bs-body-font-size);
+    font-weight: var(--bs-body-font-weight);
+    line-height: var(--bs-body-line-height);
+    color: var(--bs-body-color);
+    text-align: var(--bs-body-text-align);
+    background-color: unset !important;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+}
 html {
-    background: url('./assets/images/Solitaire-Game-Background.png') no-repeat center center fixed;
+    background: url('/assets/images/Solitaire-Game-Background.png') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    max-width: 1920px;
-    max-height: 1200px;
+    width: 100%;
+    /* height: 1200px; */
     overflow: hidden;
 }
 
-.header{
-    /* display: flex; */
-    width: 800px;
-    height: 220px;
+
+.hand{
+    width: 100%;
+    /* height: 500px; */
     margin: auto;
-    /* border: 1px solid #ccc; */
-}
-
-/* div[id^="stack"]{
-    justify-self: center;
-    display:flex;
-    width: 150px;
-    height: 200px;
-    margin: .75rem;
-}
-
-#cardHand{
     display: flex;
-    align-content: space-between;
-    flex-direction: row;
-    margin: auto;
-} */
-
-#rowB{
-    background-image: url('/assets/images/cards/BlueCardBack.png');
-    width:150px;
-    height: 200px;
-    background-color: rgba(255, 255, 255, .25);
-    margin: .5rem;
 }
 
-#rowA{
-    width:150px;
-    height: 200px;
-    background-color: rgba(255, 255, 255, .25);
-    margin: .5rem;
+.dealerLable{
+    font-size: 2rem; 
+    margin:auto;
+    color: rgb(182, 182, 17);
+    text-shadow: 1px 1px 2px black;
 }
 
 footer {
@@ -58,3 +51,158 @@ footer {
     margin:auto;
     align-self: center;
 }
+
+.dealer-card-container{
+    border: 1px solid #ffff00;
+    background-color: rgba(27, 117, 48, .7);
+    border-radius: 25px;
+    /* width: 450px;
+    height: 300px; */
+    margin: auto;
+    text-align: center;
+    padding:1rem;
+    box-shadow: 10px 10px 33px -11px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 33px -11px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 33px -11px rgba(0,0,0,0.75);
+}
+.cards-container{
+    /* width: 400px;
+    height:220px; */
+    display: flex;
+    margin: auto;
+    text-align: center;
+}
+.card{
+    margin:1rem;
+}
+
+.game-console{
+    /* height: 600px; */
+    margin: auto;
+
+}
+.button-container{
+    margin:auto;
+    text-align: center;
+}
+button{
+    height: 65px;
+    width: 100px;
+}
+
+ .gamebetbtn {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    box-shadow: 10px 10px 33px -11px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 33px -11px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 33px -11px rgba(0,0,0,0.75);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+} 
+
+.usr-container{
+    width:150px;
+    font-size: 1.5rem; 
+    margin:auto;
+    color: rgb(182, 182, 17);
+    text-shadow: 1px 1px 2px black;
+    text-align: left;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    -webkit-animation-name: fadeIn; /* Fade in the background */
+    -webkit-animation-duration: 0.4s;
+    animation-name: fadeIn;
+    animation-duration: 0.4s
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: fixed;
+    bottom: 0;
+    background-color: #fefefe;
+    width: 100%;
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slideIn;
+    animation-duration: 0.4s;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .modal-header {
+    padding: 2px 16px;
+    background-color: #1b7530;
+    color: white;
+  }
+  
+  .modal-body {
+      padding: 2px 16px;
+      height:400px;
+    }
+  
+  .modal-footer {
+    padding: 2px 16px;
+    background-color: #1b7530;
+    color: white;
+  }
+  
+  /* Add Animation */
+  @-webkit-keyframes slideIn {
+    from {bottom: -300px; opacity: 0} 
+    to {bottom: 0; opacity: 1}
+  }
+  
+  @keyframes slideIn {
+    from {bottom: -300px; opacity: 0}
+    to {bottom: 0; opacity: 1}
+  }
+  
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+  }
+
+  .game-console{
+    height: 600px;
+  }
