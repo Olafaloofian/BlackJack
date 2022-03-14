@@ -28,3 +28,12 @@ Deliverables
 
 Changed Direction, Originally I wanted to build a game of solitaire whcih turned out to be a lot harder then I expected.  So I switched gears and started blackjack.  Somethin wth fewer cards. I still want to build the solitare game but I will do that at a later date.
 
+Black Jack	
+Buttons
+              Bet
+	Hit	
+	Start New Game
+
+Bank 
+
+Time playing
