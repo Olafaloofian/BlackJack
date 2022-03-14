@@ -5,6 +5,8 @@ const sCards = ['s01', 's02', 's03', 's04', 's05', 's06', 's07', 's08', 's09', '
 let deck = [];
 
 const blackJack = {
+    //algorithm: Fisher-Yates (aka Knuth) Shuffle. 
+    //for more read: https://bost.ocks.org/mike/shuffle/
     shuffleCards(array)
     {
         var m = array.length, t, i;
@@ -22,13 +24,13 @@ const blackJack = {
         let cards = deck.splice(0, 4);
         
         //player Card
-        this.drawCard(cards[0], 'player1')
+        setTimeout(this.drawCard(cards[0], 'player1'), 31000)
         //dealer Card
-        this.drawCard(cards[1], 'dealer1')
+        setTimeout(this.drawCard(cards[1], 'dealer1'), 31000)
         //player Card
-        this.drawCard(cards[2], 'player2')
+        setTimeout(this.drawCard(cards[2], 'player2'), 31000)
         //dealer Card
-        this.drawCard(cards[3], 'dealer2')
+        setTimeout(this.drawCard(cards[3], 'dealer2'), 31000)
 
 
     },
@@ -48,7 +50,10 @@ const blackJack = {
         else
         {
             img.src ='/assets/images/cards/BlueCardBack.png'
+            cardDiv.setAttribute('onclick', `blackJack.flipCard(this)`);
         }
+
+
         cardDiv.appendChild(img)
 
 
@@ -68,20 +73,31 @@ const blackJack = {
                 return 'Spade';
                 break;
         }
-    }
+    },
+    flipCard(element){
+        //Remove image
+        var list=document.getElementById(element.id).innerHTML = '';
+        //list.parentNode.removeChild(list);
+        //add image
+        img = document.createElement('img')
+        img.src = `/assets/images/cards/${element.dataset.suite.substring(0, 1).toLowerCase()}${element.dataset.value < 10 ? '0' + element.dataset.value : element.dataset.value}.png`
+        console.log(img.src)
+        let card = document.getElementById(element.id);
+        card.appendChild(img)
 
+        loses.innerHTML = '';
+    },
 }
 
 window.onload = () => {
 //combine cards
     deck = [].concat(cCards, dCards, hCards, sCards); 
-    
+
     //shuffle card
     let myDeck = blackJack.shuffleCards(deck);
     console.log('Shuffled Cards: ' + myDeck.length);
 
     deck = myDeck;
-
 }
 
 
